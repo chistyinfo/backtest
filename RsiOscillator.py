@@ -6,10 +6,10 @@ from backtesting.lib import crossover
 
 
 class RsiOscillator(Strategy):
-    upper_bound = 70
+    upper_bound = 75
+    # Lower band limit is important
     lower_bound = 30
-    rsi_window = 9
-
+    rsi_window = 14
 
     # Do as much initial computation as possible
     def init(self):
@@ -22,5 +22,3 @@ class RsiOscillator(Strategy):
             self.position.close()
         elif crossover(self.lower_bound, self.rsi):
             self.buy()
-
-
