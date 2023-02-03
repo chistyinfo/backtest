@@ -4,7 +4,6 @@ from backtesting import Strategy
 from backtesting.lib import crossover
 
 
-
 class SmaCross(Strategy):
     n1 = 9
     n2 = 20
